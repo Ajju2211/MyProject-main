@@ -1,0 +1,81 @@
+<div class="app-membersearch rightside">
+  <!-- <nav class="navbar navbar-dark bg-primary justify-content-center">
+    <span class="navbar-brand mb-0 h1 ">Healthcare Member Portal</span>
+  </nav>
+  <br><br> -->
+  <div class="row">
+    <div class="col-md-6 offset-md-3 border">
+      <form [formGroup]="Search" (ngSubmit)="SearchSubmitted()">
+        <br>
+        <h4><b>Detail Search</b></h4>
+        <hr color="blue">
+        <div class="form-inline">
+          <label for="id"><b>ID :</b></label>
+          <input type="text" class="form-control" id="id" placeholder="Enter ID " formControlName="id">
+          <div class="form-text text-danger" *ngIf="ID.errors?.['required'] && (ID.dirty || ID.touched)">*ID is Required !</div>
+
+        </div>
+
+        <br>
+        
+        
+       
+        <div class="form-inline">
+          <div class="form-group">
+            <label for="claimid"><b>Claim ID :</b></label>
+            <input type="text" class="form-control" #fname placeholder="Enter Claim ID" formControlName="claimid">
+            <br>
+            <br>
+            <div class="outer d-flex justify-content-end">
+              <!-- <div class="inner me-4"><button type="cancel" routerLink="/login" class="btn btn-secondary rounded">Cancel</button></div> &nbsp; -->
+              <div class="inner"><button type=" search" class="btn btn-secondary rounded">Search</button></div>
+            </div>
+            <br><br>
+          </div>
+        </div>
+        <div class="table table-bordered ">
+          <table class="table table-bordered border border-primary text-white" margin-right:4px>
+            <thead>
+              <tr>
+                <th class="col">id</th>
+                <th class="col">name</th>
+                <th class="col">path</th>
+                <th class="col">WorkitemType</th>
+
+              </tr>
+            </thead>
+            <!--<tbody>
+             <tr *ngFor="let member of members">
+               <td>
+    {{$_work.id}}
+  </td>
+  <td>
+    {{$_work.fields["System.Title"]}}
+  </td>
+  <td>{{member.lastName}}</td>
+  <td>{{member.physicianId}}</td>
+  <td>{{member.claimId || 'none'}}</td>
+  <td>{{member.claimAmount || 'none'}}</td>
+
+  <td><input class="form-check-input claimCheck" type="checkbox" (change)="toggleInput($event)" value="false" id="flexCheckDefault" /></td>
+             </tr>
+           </tbody>--->
+          </table>
+        </div>
+
+        <!-- <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class=" d-flex justify-content-end">
+              <button type="button" class="btn btn-primary " routerLink="/claimsubmission">Submit Claim</button>
+            </div>
+          </ul>
+        </nav> -->
+
+
+      </form>
+    </div>

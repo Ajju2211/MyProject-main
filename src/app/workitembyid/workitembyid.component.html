@@ -1,0 +1,20 @@
+<div class="container-fluid rightside">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 border">
+      <form [formGroup]="WorkItemById" (ngSubmit)="workItembyid()">
+        <br>
+        <h4>WorkItemById</h4>
+        <hr color="blue">
+        <div class="form-group">
+          <label for="id"><b>ID :</b></label>
+          <input type="text" class="form-control" id="id" placeholder="Enter ID" formControlName="ID">
+          <div class="form-text text-danger" *ngIf="id.errors?.['required'] && (id.dirty || id.touched)">*ID is Required !</div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary rounded">GET</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>

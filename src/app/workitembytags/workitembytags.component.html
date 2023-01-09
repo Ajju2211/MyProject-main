@@ -1,0 +1,20 @@
+<div class="container-fluid rightside">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 border">
+      <form [formGroup]="Tags" (ngSubmit)="tags()">
+        <br>
+        <h4>WorkItems by Tags</h4>
+        <hr color="blue">
+        <div class="form-group">
+          <label for="Tag"><b>Tag :</b></label>
+          <input type="text" class="form-control" id="Tag" placeholder="Enter Tagname" formControlName="Tag">
+          <div class="form-text text-danger" *ngIf="Tagname.errors?.['required'] && (Tagname.dirty || Tagname.touched)">*Tagname is Required !</div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary rounded">GET</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>

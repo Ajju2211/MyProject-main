@@ -1,0 +1,53 @@
+<div class="container-fluid rightside">
+
+  <h5 class="d-flex justify-content-center">ways to get details</h5>
+  <table class="table container-fluid mb-2">
+    <thead>
+        <tr>
+            <th class="col">id</th>
+            <th class="col">name</th>
+            <th class="col">Url</th>
+            <th class="col">
+                <span style="font-weight: 400; font-style: normal">visibility</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody id="sprint-details-table">
+      <tr *ngFor="let project of projects">
+        <td>{{project.id}}</td>
+        <td>{{project.name}}</td>
+        <td><a target="_blank" href="{{project.url}}">Click here</a></td>
+        <td>{{project.visibility}}</td>
+      </tr>
+       <!-- <td><input class="form-check-input claimCheck" type="checkbox" (change)="toggleInput($event)" value="false" id="flexCheckDefault" /></td>-->
+    </tbody>
+</table>
+
+  <div class="mt-4 mb-4">
+
+    <div class="d-flex text-white" style="justify-content:space-around;">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Sprint Details</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item"  routerLink="/allsprints">All Sprints</a></li>
+        <li><a class="dropdown-item"  routerLink="/workitembysprint">Workitems in Sprint</a></li>
+      </ul>
+
+      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Workitems</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" routerLink="/workitembyid">Workitem by id</a></li>
+        <li><a class="dropdown-item" href="#">Workitems by multiple id</a></li>
+        <li><a class="dropdown-item" href="#">Get Workitems with updates</a></li>
+        <li><a class="dropdown-item" routerLink="/workitembytags">Get WorkItems using Tags</a></li>
+        <li><a class="dropdown-item" href="#">Get Cognizant WorkItems </a></li>
+        <li><a class="dropdown-item" href="#">Get Non Cognizant WorkItems </a></li>
+        <li><a class="dropdown-item"  routerLink="/workitembydate">Get Workitems Using Specific Date</a></li>
+
+      </ul>
+
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid rightside">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 border">
+      <form [formGroup]="WorkItemByDate" (ngSubmit)="workItembydate()">
+        <br>
+        <h4>WorkItemsByDate</h4>
+        <hr color="blue">
+        <div class="form-group">
+          <label for="startdate"><b>StartDate :</b></label>
+          <input type="date" class="form-control" id="startdate" placeholder="Enter StartDate" formControlName="date">
+          <div class="form-text text-danger" *ngIf="startdate.errors?.['required'] && (startdate.dirty || startdate.touched)">*StartDate is Required !</div>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="date"><b>EndDate :</b></label>
+          <input type="date" class="form-control" id="date" placeholder="Enter Date" formControlName="date">
+          <div class="form-text text-danger" *ngIf="enddate.errors?.['required'] && (enddate.dirty || enddate.touched)">*Date is Required !</div>
+        </div><br />
+        <button type="submit" class="btn btn-primary rounded">GET</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
